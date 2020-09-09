@@ -1,0 +1,29 @@
+
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+
+$ResponsiveDesign-primary: mat-palette($mat-teal);
+
+// $ResponsiveDesign-accent: mat-palette($mat-pink, A200, A100, A400);
+$ResponsiveDesign-accent: mat-palette($mat-blue);
+
+// The warn palette is optional (defaults to red).
+$ResponsiveDesign-warn: mat-palette($mat-red);
+
+
+// $ResponsiveDesign-theme: mat-light-theme($ResponsiveDesign-primary, $ResponsiveDesign-accent, $ResponsiveDesign-warn);
+$ResponsiveDesign-theme: mat-dark-theme($ResponsiveDesign-primary, $ResponsiveDesign-accent, $ResponsiveDesign-warn);
+
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($ResponsiveDesign-theme);
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}

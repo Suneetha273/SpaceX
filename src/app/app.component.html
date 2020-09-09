@@ -1,0 +1,47 @@
+<div class="row col-md-12 col-sm-12">
+  <h1>SpaceXLaunch</h1>
+</div>
+
+<div class="row col-md-12 col-sm-12">
+  <div class="col-md-2 col-sm-12">
+    <h1>Filters</h1>
+    <u><h3 style="text-align: center;">Launch Year</h3></u>
+    <div class="row">
+      <div class="col-md-6 col-sm-6" *ngFor="let item of spacexlaunch">
+        <button type="button" class="btn button-primary" style="margin:9px;border-radius:5px;background-color: peru;">{{item.launch_year}}</button>
+      </div>
+    </div>
+    <u><h3 style="text-align: center;">Successful Launch</h3></u>
+    <div class="row">
+      <div class="col-md-6 col-sm-6" *ngFor="let item of spacexlaunch">
+        <button type="button" class="btn button-primary" style="margin:9px;border-radius:5px;background-color: peru;">{{item.launch_success}}</button>
+      </div>
+    </div>
+    <!-- <u><h3 style="text-align: center;">Successful Landing</h3></u>
+    <div class="row">
+      <div class="col-md-6 col-sm-6" *ngFor="let item of spacexlaunch">
+        <button type="button" class="btn button-primary" style="margin:9px;border-radius:5px;background-color: peru;">{{item.land_success}}</button>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="row col-md-10">
+
+    <div class="col-md-3 col-sm-12" *ngFor="let item of spacexlaunch">
+      <div class="" style="border:ridge">
+        <div style="background: gray;">
+          <img alt="" width="70px" [src]="item.links.mission_patch_small">
+        </div>
+        <div>
+          <label>{{item.mission_name}} # {{item.flight_number}}</label><br>
+          <label>MissionId : </label>{{item.mission_id}}<br>
+          <label>Launch Year : </label>{{item.launch_year}}<br>
+          <label>Successful Launch : </label>{{item.launch_success}}<br>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+<label>developed by Suneetha</label>
+</div>

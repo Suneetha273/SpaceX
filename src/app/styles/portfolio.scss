@@ -1,0 +1,12 @@
+.mat-card{
+    color:$body-color;
+    background-color: $alt-big;
+    .mat-card-header-text{
+        margin:0rem o.5rem
+    }
+}
+.filter-card{
+    .mat-card-header-text{
+        margin:0rem;
+    }
+}
